@@ -23,10 +23,20 @@ if (jonSnowHealth <= jamieLannisterAttack) {
 // Jon pick's up a shield
 jonSnowDefense += 25;
 
-if (jonSnowHealth is <= jamieLannisterAttack - jonSnowDefense) {
+if (jonSnowHealth <= jamieLannisterAttack - jonSnowDefense) {
     console.log("Jon Snow is dead")
-else {
-    health -= (jamieLannisterAttack - jonSnowDefense)
+} else {
+    jonSnowHealth -= (jamieLannisterAttack - jonSnowDefense)
     console.log(`Jon Snow's Health is down to ${jonSnowHealth}`)
 }
+
+
+// Peasant throws Jon a hleath kit of 50: Heal up!
+const healthKit = 50;
+
+if ((jonSnowHealth + healthKit) >= 100) {
+    jonSnowHealth = 100;
+} else {
+    jonSnowHealth += healthKit;
 }
+
